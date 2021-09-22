@@ -21,7 +21,8 @@
     <div class="search">
         <div class="icon"></div>
         <div class="input">
-        <input type="text" class="textbox" placeholder="Nhập vô kiếm cho..." id="mysearch">
+                <input type="text" class="textbox" placeholder="Nhập vô kiếm cho..." id="mysearch">
+                <p></p>
         </div>
         <span class="mic-icon"><i class="fas fa-microphone" ></i></span>
         <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
@@ -44,8 +45,6 @@
 
     <script>
         //nhập bằng giọng nói
-        var textbox = document.getElementById('mysearch');
-
         var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 
         const recognition = new SpeechRecognition();
@@ -56,6 +55,7 @@
         const microphone = document.querySelector('.mic-icon');
 
         const handleVoice = (text) => {
+            document.getElementById('mysearch').value = text;
             console.log(text);
         }
         
@@ -71,10 +71,8 @@
         }
         recognition.onresult = (e) => {
             console.log('onresult', e);
-            const last = e.results.length - 1;
             const text = e.results[0][0].transcript;
             handleVoice(text);
-            textbox.textContent = text;
         }
 
     </script>
