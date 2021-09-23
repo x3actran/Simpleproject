@@ -21,8 +21,7 @@
     <div class="search">
         <div class="icon"></div>
         <div class="input">
-                <input type="text" class="textbox" placeholder="Nhập vô kiếm cho..." id="mysearch">
-                <p></p>
+            <input type="text" class="textbox" placeholder="Nhập vô kiếm cho..." id="mysearch">
         </div>
         <span class="mic-icon"><i class="fas fa-microphone" ></i></span>
         <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
@@ -54,11 +53,13 @@
 
         const microphone = document.querySelector('.mic-icon');
 
+        // ghi ra nội dung giọng nói
         const handleVoice = (text) => {
             document.getElementById('mysearch').value = text;
             console.log(text);
-        }
+        } 
         
+        // gọi đến sự kiện mở micro
         microphone.addEventListener('click', (e) => {
             e.preventDefault();
             recognition.start();
