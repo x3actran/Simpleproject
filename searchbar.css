@@ -19,9 +19,14 @@ body
     color: #611574;
     position: absolute;
     top: 30%;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+    width: 230px;
+    height: 30px;
+    align-items: center;
+    cursor: pointer;
+}
+.h1:hover
+{
+    color: rgb(230, 199, 171);
 }
 .search
 {
@@ -36,7 +41,7 @@ body
 }
 .search.active
 {
-    width: 360px;
+    width: 600px;
 }
 .search .icon
 {
@@ -76,7 +81,7 @@ body
 .search .input
 {
     position: relative;
-    width: 230px;
+    width: 480px;
     height: 60px;
     left: 60px;
     justify-content: center;
@@ -97,7 +102,7 @@ body
 {
     position: absolute;
     top: 0%;
-    right: 12%;
+    right: 7%;
     width: 20px;
     height: 60px;
     border-radius: 100%;
@@ -131,6 +136,10 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.clear:hover
+{
+    background-color:cyan;
 }
 .clear::before
 {
